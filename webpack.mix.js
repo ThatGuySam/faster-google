@@ -13,11 +13,12 @@ require('mix-html-builder')
  |
  */
 
- 
+
 // Examples
 // https://github.com/JeffreyWay/laravel-mix/blob/master/setup/webpack.mix.js
 
 
+mix.copy('static', 'public')
 
 mix.html({
     htmlRoot: './src/index.html', // Your html root file(s)
