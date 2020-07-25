@@ -7,21 +7,67 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="Description" content="The faster Google. ">
+
+        <style>
+            /* Flex center */
+            .c {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            /* Full Width */
+            .w {
+                width: 100%;
+            }
+        </style>
+        
     </head>
 
     <body
+        class="c"
         style="
-            height: 100vh;
+            margin: 0;
+            height: 72vh;
         "
     >
         <include src="google-logo.svg"></include>
-        <form action="https://www.google.com/search" method="get">
-            <input
-                aria-label="Search"
-                name="q"
-                type="text"
-                autofocus
-            ><br><br>
+        <br>
+        <br>
+        <form
+            class="c w"
+            action="https://www.google.com/search"
+            method="get"
+            style="max-width: 582px;"
+        >
+            <!-- Search bar wrapper -->
+            <div
+                class="c w"
+                style="
+                    border-radius: 24px;
+                    border: 1px solid #dfe1e5;
+                    padding: 0 16px;
+                    height: 44px;
+                "
+            >
+                <input
+                    class="w"
+                    aria-label="Search"
+                    name="q"
+                    type="text"
+                    style="
+                        height: 34px;
+                        border: none;
+                        outline: none;
+                        font-size: 16px;
+                    "
+                    autofocus
+                >
+            </div>
+            <br>
+            <br>
+            <br>
             <input type="submit" value="Google Search">
         </form>
     </body>
