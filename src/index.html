@@ -2,13 +2,28 @@
 <html lang="en">
 
     <head>
-        <title>.</title>
+        <title>Faster Google</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="Description" content=".">
+        <meta name="Description" content="The faster Google. ">
     </head>
 
-    .
+    <body
+        style="
+            height: 100vh;
+        "
+    >
+        <include src="google-logo.svg"></include>
+        <form action="https://www.google.com/search" method="get">
+            <input
+                aria-label="Search"
+                name="q"
+                type="text"
+                autofocus
+            ><br><br>
+            <input type="submit" value="Google Search">
+        </form>
+    </body>
 
 </html>
