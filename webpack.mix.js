@@ -17,6 +17,13 @@ require('mix-html-builder')
 // Examples
 // https://github.com/JeffreyWay/laravel-mix/blob/master/setup/webpack.mix.js
 
+mix.browserSync({ // eslint-disable-line no-sync
+    proxy: false,
+    single: true,
+    server: {
+        baseDir: './public'
+    }
+})
 
 mix.copy('static', 'public')
 
