@@ -32,6 +32,7 @@ mix.html({
     output: 'public', // The html output folder
     partialRoot: './src/partials',    // default partial path
     // layoutRoot: './src/layouts',    // default partial path
+    minifyCSS: true,
     minify: {
         removeComments: true,
         collapseWhitespace: true
