@@ -18,7 +18,6 @@ result.xml
 npm-debug.log
 /yarn-error.log
 /now-secrets.json
-/public/mix-manifest.json
 now-secrets.json
 /netlifyctl-debug.log
-/public/index.html
+/public
