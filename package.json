@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ThatGuySam/fastest-lighthouse/issues"
   },
-  "homepage": "https://github.com/ThatGuySam/fastest-lighthouse#readme"
+  "homepage": "https://github.com/ThatGuySam/fastest-lighthouse#readme",
+  "devDependencies": {
+    "laravel-mix": "^5.0.4"
+  }
 }
