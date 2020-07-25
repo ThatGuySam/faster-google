@@ -23,7 +23,7 @@ mix.copy('static', 'public')
 mix.html({
     htmlRoot: './src/index.html', // Your html root file(s)
     output: 'public', // The html output folder
-    // partialRoot: './src/partials',    // default partial path
+    partialRoot: './src/partials',    // default partial path
     // layoutRoot: './src/layouts',    // default partial path
     minify: {
         removeComments: true,
