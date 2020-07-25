@@ -1,6 +1,6 @@
 let mix = require('laravel-mix')
 
-require('mix-html-builder') 
+require('./mix-html-builder') 
 
 /*
  |--------------------------------------------------------------------------
