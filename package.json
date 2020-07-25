@@ -1,0 +1,19 @@
+{
+  "name": "fastest-lighthouse",
+  "version": "1.0.0",
+  "description": "Fastest valid site possible for Lighthouse",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThatGuySam/fastest-lighthouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThatGuySam/fastest-lighthouse/issues"
+  },
+  "homepage": "https://github.com/ThatGuySam/fastest-lighthouse#readme"
+}
