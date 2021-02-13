@@ -11,8 +11,8 @@
     "prod": "NODE_ENV=production npm run generate-eleventy",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "generate-eleventy": "npm run generate-postcss && node -r esm node_modules/.bin/eleventy --quiet",
-    "dev-eleventy": "node -r esm node_modules/.bin/eleventy --quiet --watch --serve"
     "generate-postcss": "postcss src/styles/index.css --o static/index.css",
+    "dev-eleventy": "node -r esm node_modules/.bin/eleventy --watch --serve"
   },
   "repository": {
     "type": "git",
