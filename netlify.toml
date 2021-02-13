@@ -3,6 +3,12 @@
     publish = "dist"
     functions = ""
 
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+        Content-Security-Policy = "default-src 'self';"
+
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]
