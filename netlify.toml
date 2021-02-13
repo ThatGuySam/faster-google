@@ -1,6 +1,6 @@
 [Build]
     command = "npm run prod"
-    publish = "public"
+    publish = "dist"
     functions = ""
 
 # The following redirect is intended for use with most SPAs that handle
