@@ -9,7 +9,7 @@
  *
  * @import "tailwindcss/base";
  */
- @tailwind base;
+ /* @tailwind base; */
 
  /**
   * This injects any component classes registered by plugins.
@@ -18,7 +18,7 @@
   *
   * @import "tailwindcss/components";
   */
- @tailwind components;
+ /* @tailwind components; */
  
  /**
   * Here you would add any of your custom component classes; stuff that you'd
@@ -45,3 +45,61 @@
   * @import "tailwindcss/utilities";
   */
  @tailwind utilities;
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    color: #202124;
+}
+
+/* Flex center */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-shadow:hover {
+    /* filter: drop-shadow( 0 1px 6px rgb(32 33 36 / 28%)); */
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    border-color: rgba(223,225,229,0);
+}
+
+input[type="submit"] {
+    /* background-color: #f8f9fa; */
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    /* color: #3c4043; */
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    /* background-color: #f8f9fa; */
+    border: 1px solid #dadce0;
+    /* color: #202124; */
+}
+
+input[type="submit"]:focus {
+    border: 1px solid #4d90fe;
+    outline: none;
+}
+
+.bg-off-white {
+    background-color: #f8f9fa;
+}
+
+.text-input-dark {
+    color: rgba(0,0,0,.87);
+}

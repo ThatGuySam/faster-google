@@ -8,32 +8,15 @@
 
         <meta name="Description" content="The faster Google. ">
 
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            
-            /* Flex center */
-            .c {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-
-            /* Full Width */
-            .w {
-                width: 100%;
-            }
-        </style>
+        <link rel="stylesheet" href="index.css">
         
     </head>
 
     <body
-        class="c"
+        class="flex-center"
         style="
             margin: 0;
-            height: 72vh;
+            height: 85vh;
         "
     >
         <svg 
@@ -53,7 +36,7 @@
         <br>
         <br>
         <form
-            class="c w"
+            class="flex-center w-full"
             action="https://www.google.com/search"
             method="get"
             style="
@@ -63,16 +46,15 @@
         >
             <!-- Search bar wrapper -->
             <div
-                class="c w"
+                class="flex-center w-full hover-shadow px-3"
                 style="
                     border-radius: 24px;
                     border: 1px solid #dfe1e5;
-                    padding: 0 16px;
                     height: 44px;
                 "
             >
                 <input
-                    class="w"
+                    class="w-full text-input-dark"
                     aria-label="Search"
                     name="q"
                     type="text"
@@ -80,7 +62,6 @@
                         height: 34px;
                         border: none;
                         outline: none;
-                        font-size: 16px;
                     "
                     autofocus
                 >
@@ -88,11 +69,15 @@
             <br>
             <br>
             <br>
-            <input type="submit" value="Google Search">
+            <input 
+                type="submit" 
+                value="Google Search"
+                class="text-md bg-off-white px-4"
+            >
         </form>
         
         <div
-            class="c w"
+            class="flex-center w-full"
             style="
                 position: absolute;
                 bottom: 0;

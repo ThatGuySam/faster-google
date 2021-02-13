@@ -4,6 +4,9 @@
 // import { InlineCodeManager } from '@11ty/eleventy-assets'
 
 const htmlmin = require('html-minifier')
+const posthtml = require('posthtml')
+const minifyClassnames = require('posthtml-minify-classnames')
+const pluginInlineCss = require('@navillus/eleventy-plugin-inline-css')
 
 // import nuxtConfig from './nuxt.config'
 
@@ -17,18 +20,32 @@ const htmlmin = require('html-minifier')
 
 module.exports = function ( eleventyConfig ) {
 
-    eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
+    eleventyConfig.addPlugin(pluginInlineCss, {
+        input: 'static', // look for all stylesheets relative to `./src/assets`
+        cleanCss: false, // disable clean-css
+        purgeCss: true
+        // {
+        //   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [] // custom CSS extractor used for PurgeCSS
+        // }
+    })
+
+    eleventyConfig.addTransform('htmlmin', async function(content, outputPath) {        
         // Eleventy 1.0+: use this.inputPath and this.outputPath instead
         if( outputPath.endsWith('.html') ) {
+            const { html: htmlWithMiniClassnames } = await posthtml()
+                .use(minifyClassnames())
+                .process( content )
+
             // https://github.com/kangax/html-minifier#options-quick-reference
-            let minified = htmlmin.minify(content, {
+            let minified = htmlmin.minify( htmlWithMiniClassnames , {
                 useShortDoctype: true,
                 removeComments: true,
                 collapseWhitespace: true,
                 collapseInlineTagWhitespace: true,
                 minifyCSS: true
-            });
-            return minified;
+            })
+
+            return minified
         }
     
         return content;
