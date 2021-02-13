@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/ThatGuySam/fastest-lighthouse#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
     "browser-sync": "^2.26.10",
     "browser-sync-webpack-plugin": "^2.0.1",
     "cross-env": "^7.0.2",
+    "esm": "^3.2.25",
     "filename-regex": "^2.0.1",
     "html-webpack-plugin": "^4.3.0",
     "laravel-mix": "^5.0.4",
