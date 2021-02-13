@@ -5,11 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "npm run dev-eleventy",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run development -- --watch",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "NODE_ENV=production npm run generate-eleventy",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "generate-eleventy": "npm run generate-postcss && node -r esm node_modules/.bin/eleventy --quiet",
     "generate-postcss": "postcss src/styles/index.css --o static/index.css",
     "dev-eleventy": "node -r esm node_modules/.bin/eleventy --watch --serve"
@@ -27,26 +23,17 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@navillus/eleventy-plugin-inline-css": "^1.0.3",
-    "browser-sync": "^2.26.10",
-    "browser-sync-webpack-plugin": "^2.0.1",
-    "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
     "esm": "^3.2.25",
-    "filename-regex": "^2.0.1",
     "html-minifier": "^4.0.0",
-    "html-webpack-plugin": "^4.3.0",
-    "laravel-mix": "^5.0.4",
-    "mix-html-builder": "^0.6.1",
     "netlify-plugin-csp-generator": "^1.2.2",
     "postcss": "^8.2.6",
     "postcss-cli": "^8.3.1",
     "posthtml": "^0.15.1",
     "posthtml-minify-classnames": "^0.2.3",
-    "resolve-url-loader": "^3.1.0",
-    "sass": "^1.26.10",
-    "sass-loader": "^8.0.2",
-    "tailwindcss": "^2.0.3",
-    "vue-template-compiler": "^2.6.11"
+    "tailwindcss": "^2.0.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "autoprefixer": "^10.2.4"
+  }
 }
