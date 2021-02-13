@@ -21,3 +21,5 @@ npm-debug.log
 now-secrets.json
 /netlifyctl-debug.log
 /public
+/dist
+/static/index.css
