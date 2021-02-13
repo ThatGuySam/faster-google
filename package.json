@@ -37,6 +37,7 @@
     "html-webpack-plugin": "^4.3.0",
     "laravel-mix": "^5.0.4",
     "mix-html-builder": "^0.6.1",
+    "netlify-plugin-csp-headers": "0.0.1-alpha.8",
     "postcss": "^8.2.6",
     "postcss-cli": "^8.3.1",
     "posthtml": "^0.15.1",
